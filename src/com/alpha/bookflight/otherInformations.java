@@ -1,114 +1,150 @@
 package com.alpha.bookflight;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
+import java.awt.Button;
 import java.awt.EventQueue;
-import java.awt.Font;
 
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JComboBox;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
-
-import com.toedter.calendar.JDateChooser;
-
-import net.proteanit.sql.DbUtils;
-
-import javax.swing.JLayeredPane;
-import javax.swing.JOptionPane;
-
-import java.awt.CardLayout;
-import javax.swing.DefaultComboBoxModel;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.Color;
+import javax.swing.JToggleButton;
+import java.awt.Font;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
+import java.sql.Types;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringJoiner;
+import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
-import javax.swing.JScrollPane;
+import javax.swing.JButton;
 
-public class otherInformations extends JFrame {
+public class bookseat extends JFrame {
 
 	private JPanel contentPane;
-	private JPanel panelStartBooking;
-	private JPanel panelSearchFlight;
-	private JPanel panelInformation;
-	private JPanel panel;
-	public static JComboBox fromBox;
-	private JLabel lblNewLabel_1;
-	public static JComboBox toBox;
-	private JLabel lblNewLabel_2;
-	private JLabel lblDeprature;
-	private JLabel lblNewLabel_4;
-	private JButton btnSearch;
-	private JLabel lblReturn;
-	private JComboBox tripBox;
-	private JDateChooser depDate;
-	private JDateChooser retDate;
-	private JComboBox classBox;
-	private JPanel panelPayment;
-	private JLayeredPane layeredPane;
-	private JTable table;
-	private JScrollPane scrollPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JButton btnPrevious;
-	private JButton btnContinue;
-	private JCheckBox premiumBox;
-	private JCheckBox chckbxNewCheckBox;
-	private JCheckBox chckbxNewCheckBox_1;
-	private JPanel panelPersonalInformation;
-	private JPanel panelEmergencyContact;
-	private JPanel panelPrimaryContact;
-	private JPanel panelName;
-	private JTextField txtName;
-	private JPanel panelNation;
-	private JTextField txtNation;
-	private JComboBox genderBox;
-	private JTextField txtPhone;
-	private JTextField txtMail;
-	private JTextField txtPassport;
-	private JTextField txtCode;
-	private JTextField txtPlus;
-	private JTextField txtEmName;
-	private JTextField txtEmPhone;
-	private JTextField txtEmMail;
-	private JDateChooser birthDate;
-	private JDateChooser passportExpiry;
-	private JPanel panelEmergencyEmail;
-	private JPanel panelEmergencyPhone;
-	private JPanel panelEmergencyName;
-	private JPanel panelPhone;
-	private JPanel panelEmail;
-	private JPanel panelPassportNo;
-	private JPanel panelCountryCode;
-	private JCheckBox checkConfirm;
-	private JButton btnNext;
-	private JButton btnBack;
-	private SimpleDateFormat dateformat;
-	private SimpleDateFormat dateformat1;
-	private SimpleDateFormat dateformat2;
-	private SimpleDateFormat dateformat3;
+	public static JToggleButton btnA3;
+	public static JToggleButton btnA4;
+	public static JToggleButton btnA5;
+	public static JToggleButton btnA13;
+	public static JToggleButton btnA14;
+	public static JToggleButton btnA9;
+	public static JToggleButton btnA8;
+	public static JToggleButton btnA7;
+	public static JToggleButton btnA6;
+	public static JToggleButton btnA12;
+	public static JToggleButton btnA11;
+	public static JToggleButton btnA10;
+	public static JToggleButton btnB1;
+	public static JToggleButton btnA1;
+	public static JToggleButton btnA2;
+	public static JToggleButton btnB2;
+	public static JToggleButton btnB3;
+	public static JToggleButton btnB4;
+	public static JToggleButton btnB5;
+	public static JToggleButton btnB6;
+	public static JToggleButton btnB7;
+	public static JToggleButton btnB8;
+	public static JToggleButton btnB9;
+	public static JToggleButton btnB10;
+	public static JToggleButton btnB11;
+	public static JToggleButton btnB12;
+	public static JToggleButton btnB13;
+	public static JToggleButton btnB14;
+	public static JToggleButton btnC1;
+	public static JToggleButton btnC2;
+	public static JToggleButton btnC3;
+	public static JToggleButton btnC4;
+	public static JToggleButton btnC5;
+	public static JToggleButton btnC6;
+	public static JToggleButton btnC7;
+	public static JToggleButton btnC8;
+	public static JToggleButton btnC9;
+	public static JToggleButton btnC10;
+	public static JToggleButton btnC11;
+	public static JToggleButton btnC12;
+	public static JToggleButton btnC13;
+	public static JToggleButton btnC14;
+	public static JToggleButton btnD1;
+	public static JToggleButton btnD2;
+	public static JToggleButton btnD3;
+	public static JToggleButton btnD4;
+	public static JToggleButton btnD5;
+	public static JToggleButton btnD6;
+	public static JToggleButton btnD7;
+	public static JToggleButton btnD8;
+	public static JToggleButton btnD9;
+	public static JToggleButton btnD10;
+	public static JToggleButton btnD11;
+	public static JToggleButton btnD12;
+	public static JToggleButton btnD13;
+	public static JToggleButton btnD14;
+	public static JToggleButton btnE1;
+	public static JToggleButton btnE2;
+	public static JToggleButton btnE3;
+	public static JToggleButton btnE4;
+	public static JToggleButton btnE5;
+	public static JToggleButton btnE6;
+	public static JToggleButton btnE7;
+	public static JToggleButton btnE8;
+	public static JToggleButton btnE9;
+	public static JToggleButton btnE10;
+	public static JToggleButton btnE11;
+	public static JToggleButton btnE12;
+	public static JToggleButton btnE13;
+	public static JToggleButton btnE14;
+	public static JToggleButton btnF1;
+	public static JToggleButton btnF2;
+	public static JToggleButton btnF3;
+	public static JToggleButton btnF4;
+	public static JToggleButton btnF5;
+	public static JToggleButton btnF6;
+	public static JToggleButton btnF7;
+	public static JToggleButton btnF8;
+	public static JToggleButton btnF9;
+	public static JToggleButton btnF10;
+	public static JToggleButton btnF11;
+	public static JToggleButton btnF12;
+	public static JToggleButton btnF13;
+	public static JToggleButton btnF14;
+	public static JToggleButton btnG1;
+	public static JToggleButton btnG2;
+	public static JToggleButton btnG3;
+	public static JToggleButton btnG4;
+	public static JToggleButton btnG5;
+	public static JToggleButton btnG6;
+	public static JToggleButton btnG13;
+	public static JToggleButton btnG7;
+	public static JToggleButton btnG8;
+	public static JToggleButton btnG9;
+	public static JToggleButton btnG10;
+	public static JToggleButton btnG11;
+	public static JToggleButton btnG12;
+	public static JToggleButton btnG14;
+	public static JToggleButton btnH1;
+	public static JToggleButton btnH2;
+	public static JToggleButton btnH3;
+	public static JToggleButton btnH4;
+	public static JToggleButton btnH5;
+	public static JToggleButton btnH6;
+	public static JToggleButton btnH7;
+	public static JToggleButton btnH8;
+	public static JToggleButton btnH9;
+	public static JToggleButton btnH10;
+	public static JToggleButton btnH11;
+	public static JToggleButton btnH12;
+	public static JToggleButton btnH13;
+	public static JToggleButton btnH14;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					otherInformations frame = new otherInformations();
+					bookseat frame = new bookseat();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -117,828 +153,4977 @@ public class otherInformations extends JFrame {
 		});
 	}
 
-	public otherInformations() {
+	public bookseat() {
 		initialize();
 		connect();
-		addAirport();
+		com.alpha.bookflight.CheckSeat.check();
 	}
-	
-	public static String name,gender,birth,nation,phone,mail,pass_no,pass_exp,country_code,em_name,em_phn,em_mail,
-	from,to,trip_type,s_date,r_date,flight,fl_serial,takeof,seat_class,cost;
-	
-	Connection con;
-	PreparedStatement pst;
-	ResultSet rs;
-	
-	public void connect() {
+
+	public static Connection con;
+	public static PreparedStatement pst, pst1, pst2, pst3;
+	public static ResultSet rs1, rs2, rs3, rs4, rs5, rs6, rs7, rs8, rs9, rs10, rs11, rs12, rs13, rs14, rs15, rs16, rs17,
+			rs18, rs19, rs20, rs21, rs22, rs23, rs24, rs25, rs26, rs27, rs28, rs29, rs30, rs31, rs32, rs33, rs34, rs35,
+			rs36, rs37, rs38, rs39, rs40, rs41, rs42, rs43, rs44, rs45, rs46, rs47, rs48, rs49, rs50, rs51, rs52, rs53,
+			rs54, rs55, rs56, rs57, rs58, rs59, rs60, rs61, rs62, rs63, rs64, rs65, rs66, rs67, rs68, rs69, rs70, rs71,
+			rs72, rs73, rs74, rs75, rs76, rs77, rs78, rs79, rs80, rs81, rs82, rs83, rs84, rs85, rs86, rs87, rs88, rs89,
+			rs90, rs91, rs92, rs93, rs94, rs95, rs96, rs97, rs98, rs99, rs100, rs101, rs102, rs103, rs104, rs105, rs106,
+			rs107, rs108, rs109, rs110, rs111, rs112;
+
+	String ans;
+
+	public static void connect() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost/airline","root","");
-			
-		}
-		catch(ClassNotFoundException ex) {
-			
-		}
-		catch(SQLException ex) {
-			
+			con = DriverManager.getConnection("jdbc:mysql://localhost/airline", "root", "");
+
+		} catch (ClassNotFoundException ex) {
+
+		} catch (SQLException ex) {
+
 		}
 	}
-	
-	public void flightLoad() {
-		try {
-				String Start = fromBox.getSelectedItem().toString();			
-				String End = toBox.getSelectedItem().toString();
-				String Dep = dateformat.format(depDate.getDate());
-				String ret = dateformat1.format(retDate.getDate());
-				
-				pst = con.prepareStatement("select flightname,flightserial,takeof from addflight where start = ? and destination = ? and deprature = ? and back = ?");
-				pst.setString(1, Start);
-				pst.setString(2, End);
-				pst.setString(3, Dep);
-				pst.setString(4, ret);
-				rs = pst.executeQuery();
-				table.setModel(DbUtils.resultSetToTableModel(rs));
-				
-				table.setShowHorizontalLines(true);
-				table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-				
-				TableColumn column1 = null;
-				for (int i = 0; i < 3; i++) {
-				    column1 = table.getColumnModel().getColumn(i);
-				    if(i==0) {
-				    	column1.setPreferredWidth(400);
-				    }
-				    if (i == 1) {
-				        column1.setPreferredWidth(280);
-				    }
-				    else if(i==2) {
-				    	column1.setPreferredWidth(340);
-				    }
-				}
-				table.setFont(new Font("SolaimanLipi", Font.PLAIN, 20));
-				table.setRowHeight(30);
-				
-	        } catch(SQLException ex){
-	        	ex.printStackTrace();
-	        }
-	}
-	
-	public void flightLoad_1() {
-			try{
-				String Start = fromBox.getSelectedItem().toString();			
-				String End = toBox.getSelectedItem().toString();
-				String Dep = dateformat.format(depDate.getDate());
-				
-				pst = con.prepareStatement("select flightname,flightserial,takeof from addflight where start = ? and destination = ? and deprature = ?");
-				pst.setString(1, Start);
-				pst.setString(2, End);
-				pst.setString(3, Dep);
-				rs = pst.executeQuery();
-				table.setModel(DbUtils.resultSetToTableModel(rs));
-				
-				table.setShowHorizontalLines(true);
-				table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-				
-				TableColumn column1 = null;
-				for (int i = 0; i < 3; i++) {
-				    column1 = table.getColumnModel().getColumn(i);
-				    if(i==0) {
-				    	column1.setPreferredWidth(400);
-				    }
-				    if (i == 1) {
-				        column1.setPreferredWidth(280);
-				    }
-				    else if(i==2) {
-				    	column1.setPreferredWidth(340);
-				    }
-				}
-				table.setFont(new Font("SolaimanLipi", Font.PLAIN, 20));
-				table.setRowHeight(30);
-				
-	        } catch(SQLException ex){
-	        	ex.printStackTrace();
-	        }
-	}
-	
-	public void addAirport() {
-		com.alpha.airport.Airports.Air();
-		com.alpha.airport.Airports.Air_1();
-	}
-	
-	public void switchPanels(JPanel panel) {
-		layeredPane.removeAll();
-		layeredPane.add(panel);
-		layeredPane.repaint();
-		layeredPane.revalidate();
-	}
-	
-	@SuppressWarnings({ "rawtypes", "unchecked" })
+
 	private void initialize() {
 		setDefaultLookAndFeelDecorated(false);
 		setUndecorated(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(1015, 710);
+		setSize(1000, 700);
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
-		contentPane.setForeground(Color.WHITE);
 		contentPane.setBackground(new Color(0, 0, 51));
-		contentPane.setBorder(new LineBorder(new Color(51, 0, 255), 1, true));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		layeredPane = new JLayeredPane();
-		layeredPane.setBounds(0, 0, 1015, 710);
-		contentPane.add(layeredPane);
-		layeredPane.setLayout(new CardLayout(0, 0));
-		
-		/*__________________________Start Booking Panel_____________________________*/
-		
-		panelStartBooking = new JPanel();
-		panelStartBooking.setBorder(new LineBorder(new Color(0, 51, 204), 2, true));
-		panelStartBooking.setBackground(new Color(0, 0, 51));
-		layeredPane.add(panelStartBooking, "name_16383597566101");
-		panelStartBooking.setLayout(null);
-		
-		panel = new JPanel();
-		panel.setBounds(628, 127, 377, 572);
-		panelStartBooking.add(panel);
-		panel.setLayout(null);
-		
-		fromBox = new JComboBox();
-		fromBox.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		fromBox.setBorder(new LineBorder(new Color(0, 153, 255), 2, true));
-		fromBox.setBackground(Color.WHITE);
-		fromBox.setBounds(10, 123, 357, 36);
-		panel.add(fromBox);
-		
-		JLabel lblNewLabel = new JLabel("Trip");
-		lblNewLabel.setForeground(Color.BLACK);
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel.setBounds(10, 11, 142, 26);
-		panel.add(lblNewLabel);
-		
-		lblNewLabel_1 = new JLabel("From");
-		lblNewLabel_1.setForeground(Color.BLACK);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_1.setBounds(10, 97, 142, 26);
-		panel.add(lblNewLabel_1);
-		
-		toBox = new JComboBox();
-		toBox.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		toBox.setBorder(new LineBorder(new Color(0, 153, 255), 2, true));
-		toBox.setBackground(Color.WHITE);
-		toBox.setBounds(10, 208, 357, 36);
-		panel.add(toBox);
-		
-		lblNewLabel_2 = new JLabel("To");
-		lblNewLabel_2.setForeground(Color.BLACK);
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_2.setBounds(10, 183, 142, 26);
-		panel.add(lblNewLabel_2);
-		
-		depDate = new JDateChooser();
-		dateformat = new SimpleDateFormat("yyyy-MM-dd");
-		depDate.setBounds(10, 293, 171, 36);
-		panel.add(depDate);
-		
-		retDate = new JDateChooser();
-		dateformat1 = new SimpleDateFormat("yyyy-MM-dd");
-		retDate.setBounds(196, 293, 171, 36);
-		panel.add(retDate);
-		
-		classBox = new JComboBox();
-		classBox.setModel(new DefaultComboBoxModel(new String[] {"Premium", "Economy", "Business"}));
-		classBox.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		classBox.setBorder(new LineBorder(new Color(0, 153, 255), 2, true));
-		classBox.setBackground(Color.WHITE);
-		classBox.setBounds(10, 378, 357, 36);
-		panel.add(classBox);
-		
-		lblDeprature = new JLabel("Deprature Date");
-		lblDeprature.setForeground(Color.BLACK);
-		lblDeprature.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblDeprature.setBounds(10, 267, 142, 26);
-		panel.add(lblDeprature);
-		
-		lblNewLabel_4 = new JLabel("Class");
-		lblNewLabel_4.setForeground(Color.BLACK);
-		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_4.setBounds(10, 354, 142, 26);
-		panel.add(lblNewLabel_4);
-		
-		btnSearch = new JButton("Search Flight");
-		btnSearch.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(tripBox.getSelectedItem().toString().equals("One Way")||tripBox.getSelectedItem().toString().equals("Multi Way")) {
-					flightLoad();
-				}
-				else if(tripBox.getSelectedItem().toString().equals("Return")) {
-					flightLoad_1();
-				}
-				switchPanels(panelSearchFlight);
-			}
-		});
-		btnSearch.setForeground(Color.WHITE);
-		btnSearch.setBackground(new Color(102, 51, 255));
-		btnSearch.setFont(new Font("Trebuchet MS", Font.BOLD, 30));
-		btnSearch.setBounds(10, 483, 357, 49);
-		panel.add(btnSearch);
-		
-		tripBox = new JComboBox();
-		tripBox.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(tripBox.getSelectedItem().equals("Return")) {
-					retDate.setVisible(false);
-					lblReturn.setVisible(false);
-					depDate.setBounds(10, 293, 357, 36);
-				}
-				else if(tripBox.getSelectedItem().equals("One Way")) {
-					retDate.setVisible(true);
-					lblReturn.setVisible(true);
-					depDate.setBounds(10, 293, 171, 36);
-				}
-				else if(tripBox.getSelectedItem().equals("Multi Way")) {
-					retDate.setVisible(true);
-					lblReturn.setVisible(true);
-					depDate.setBounds(10, 293, 171, 36);
-				}
-			}
-		});
-		tripBox.setModel(new DefaultComboBoxModel(new String[] {"", "Return", "One Way", "Multi Way"}));
-		tripBox.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		tripBox.setBorder(new LineBorder(new Color(0, 153, 255), 2, true));
-		tripBox.setBackground(Color.WHITE);
-		tripBox.setBounds(10, 38, 357, 36);
-		panel.add(tripBox);
-		
-		lblReturn = new JLabel("Return Date");
-		lblReturn.setForeground(Color.BLACK);
-		lblReturn.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblReturn.setBounds(196, 267, 142, 26);
-		panel.add(lblReturn);
-		
-		/*__________________________Search Flight Panel____________________________*/
-		
-		panelSearchFlight = new JPanel();
-		panelSearchFlight.setBackground(new Color(0, 0, 51));
-		panelSearchFlight.setBorder(new LineBorder(new Color(0, 51, 204), 2, true));
-		layeredPane.add(panelSearchFlight, "name_16386445882996");
-		panelSearchFlight.setLayout(null);
-		
-		scrollPane = new JScrollPane();
-		scrollPane.setBackground(Color.DARK_GRAY);
-		scrollPane.setBounds(10, 112, 995, 306);
-		panelSearchFlight.add(scrollPane);
-		
-		table = new JTable();
-		table.addMouseListener(new MouseAdapter() {
+
+		btnA1 = new JToggleButton("A1");
+		btnA1.addActionListener(new ActionListener() {
 			@Override
-			public void mouseClicked(MouseEvent arg0) {
-		        DefaultTableModel d= (DefaultTableModel) table.getModel();
-		        int selectedindex = table.getSelectedRow();        
-		        flight = d.getValueAt(selectedindex, 0).toString();
-		        fl_serial = d.getValueAt(selectedindex, 1).toString();
-		        takeof = d.getValueAt(selectedindex, 2).toString();
-			}
-		});
-		scrollPane.setViewportView(table);
-		table.setForeground(Color.WHITE);
-		table.setBackground(Color.DARK_GRAY);
-		
-		textField = new JTextField();
-		textField.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		textField.setForeground(Color.WHITE);
-		textField.setBorder(new LineBorder(new Color(0, 153, 255), 1, true));
-		textField.setOpaque(false);
-		textField.setHorizontalAlignment(SwingConstants.CENTER);
-		textField.setBackground(Color.WHITE);
-		textField.setEditable(false);
-		textField.setBounds(106, 480, 160, 33);
-		panelSearchFlight.add(textField);
-		textField.setColumns(10);
-		
-		premiumBox = new JCheckBox("Premium");
-		premiumBox.setFocusPainted(false);
-		premiumBox.setHorizontalAlignment(SwingConstants.CENTER);
-		premiumBox.setForeground(Color.WHITE);
-		premiumBox.setOpaque(false);
-		premiumBox.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		premiumBox.setBounds(106, 520, 160, 22);
-		panelSearchFlight.add(premiumBox);
-		
-		chckbxNewCheckBox = new JCheckBox("Premium");
-		chckbxNewCheckBox.setFocusPainted(false);
-		chckbxNewCheckBox.setOpaque(false);
-		chckbxNewCheckBox.setHorizontalAlignment(SwingConstants.CENTER);
-		chckbxNewCheckBox.setForeground(Color.WHITE);
-		chckbxNewCheckBox.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		chckbxNewCheckBox.setBounds(340, 520, 160, 22);
-		panelSearchFlight.add(chckbxNewCheckBox);
-		
-		textField_1 = new JTextField();
-		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		textField_1.setForeground(Color.WHITE);
-		textField_1.setBorder(new LineBorder(new Color(0, 153, 255), 1, true));
-		textField_1.setOpaque(false);
-		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_1.setBackground(Color.WHITE);
-		textField_1.setEditable(false);
-		textField_1.setColumns(10);
-		textField_1.setBounds(340, 480, 160, 33);
-		panelSearchFlight.add(textField_1);
-		
-		chckbxNewCheckBox_1 = new JCheckBox("Premium");
-		chckbxNewCheckBox_1.setFocusPainted(false);
-		chckbxNewCheckBox_1.setOpaque(false);
-		chckbxNewCheckBox_1.setHorizontalAlignment(SwingConstants.CENTER);
-		chckbxNewCheckBox_1.setForeground(Color.WHITE);
-		chckbxNewCheckBox_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		chckbxNewCheckBox_1.setBounds(602, 520, 160, 22);
-		panelSearchFlight.add(chckbxNewCheckBox_1);
-		
-		textField_2 = new JTextField();
-		textField_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		textField_2.setForeground(Color.WHITE);
-		textField_2.setBorder(new LineBorder(new Color(0, 153, 255), 1, true));
-		textField_2.setOpaque(false);
-		textField_2.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_2.setBackground(Color.WHITE);
-		textField_2.setEditable(false);
-		textField_2.setColumns(10);
-		textField_2.setBounds(602, 480, 160, 33);
-		panelSearchFlight.add(textField_2);
-		
-		btnPrevious = new JButton("Previous");
-		btnPrevious.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				switchPanels(panelStartBooking);
-			}
-		});
-		btnPrevious.setBackground(new Color(102, 51, 255));
-		btnPrevious.setForeground(Color.WHITE);
-		btnPrevious.setFont(new Font("Trebuchet MS", Font.PLAIN, 30));
-		btnPrevious.setBounds(172, 625, 302, 48);
-		panelSearchFlight.add(btnPrevious);
-		
-		btnContinue = new JButton("Continue");
-		btnContinue.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				switchPanels(panelInformation);
-			}
-		});
-		btnContinue.setForeground(Color.WHITE);
-		btnContinue.setFont(new Font("Trebuchet MS", Font.PLAIN, 30));
-		btnContinue.setBackground(new Color(102, 51, 255));
-		btnContinue.setBounds(542, 625, 302, 48);
-		panelSearchFlight.add(btnContinue);
-		
-		/*____________________________Information Panel____________________________*/
-		
-		panelInformation = new JPanel();
-		panelInformation.setBackground(new Color(0, 0, 51));
-		panelInformation.setBorder(new LineBorder(new Color(0, 51, 204), 2, true));
-		layeredPane.add(panelInformation, "name_16394798150323");
-		panelInformation.setLayout(null);
-		
-		panelPersonalInformation = new JPanel();
-		panelPersonalInformation.setBounds(14, 177, 315, 370);
-		panelInformation.add(panelPersonalInformation);
-		panelPersonalInformation.setLayout(null);
-		
-		lblNewLabel = new JLabel("Personal Information");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel.setForeground(Color.BLACK);
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(0, 0, 315, 36);
-		panelPersonalInformation.add(lblNewLabel);
-		
-		panelName = new JPanel();
-		panelName.setBorder(new LineBorder(new Color(0, 153, 255), 2, true));
-		panelName.setBackground(Color.WHITE);
-		panelName.setBounds(10, 83, 295, 36);
-		panelPersonalInformation.add(panelName);
-		panelName.setLayout(null);
-		
-		txtName = new JTextField();
-		txtName.setSelectedTextColor(Color.WHITE);
-		txtName.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		txtName.setSelectionColor(new Color(0, 102, 255));
-		txtName.setOpaque(false);
-		txtName.setBorder(null);
-		txtName.setBounds(10, 0, 275, 36);
-		panelName.add(txtName);
-		txtName.setColumns(10);
-		
-		panelNation = new JPanel();
-		panelNation.setBackground(Color.WHITE);
-		panelNation.setBorder(new LineBorder(new Color(0, 153, 255), 2, true));
-		panelNation.setLayout(null);
-		panelNation.setBounds(10, 320, 295, 36);
-		panelPersonalInformation.add(panelNation);
-		
-		txtNation = new JTextField();
-		txtNation.setSelectedTextColor(Color.WHITE);
-		txtNation.setOpaque(false);
-		txtNation.setSelectionColor(new Color(0, 102, 255));
-		txtNation.setBackground(Color.WHITE);
-		txtNation.setBorder(null);
-		txtNation.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		txtNation.setColumns(10);
-		txtNation.setBounds(10, 0, 275, 36);
-		panelNation.add(txtNation);
-		
-		JLabel lblNewLabel_1 = new JLabel("Name of Passanger");
-		lblNewLabel_1.setForeground(Color.BLACK);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_1.setBounds(10, 62, 295, 20);
-		panelPersonalInformation.add(lblNewLabel_1);
-		
-		JLabel lblNewLabel_1_1 = new JLabel("Gender");
-		lblNewLabel_1_1.setForeground(Color.BLACK);
-		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_1_1.setBounds(10, 139, 295, 20);
-		panelPersonalInformation.add(lblNewLabel_1_1);
-		
-		JLabel lblNewLabel_1_2 = new JLabel("Birth Date");
-		lblNewLabel_1_2.setForeground(Color.BLACK);
-		lblNewLabel_1_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_1_2.setBounds(10, 219, 295, 20);
-		panelPersonalInformation.add(lblNewLabel_1_2);
-		
-		JLabel lblNewLabel_1_3 = new JLabel("Nationality");
-		lblNewLabel_1_3.setForeground(Color.BLACK);
-		lblNewLabel_1_3.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_1_3.setBounds(10, 299, 295, 20);
-		panelPersonalInformation.add(lblNewLabel_1_3);
-		
-		genderBox = new JComboBox();
-		genderBox.setModel(new DefaultComboBoxModel(new String[] {"", "Male", "Female", "Others"}));
-		genderBox.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		genderBox.setBorder(new LineBorder(new Color(0, 153, 255), 2, true));
-		genderBox.setBackground(Color.WHITE);
-		genderBox.setBounds(10, 160, 295, 36);
-		panelPersonalInformation.add(genderBox);
-		
-		birthDate = new JDateChooser();
-		dateformat2 = new SimpleDateFormat("yyyy-MM-dd");
-		birthDate.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		birthDate.setBorder(new LineBorder(new Color(0, 153, 255), 2, true));
-		birthDate.setBackground(Color.WHITE);
-		birthDate.setBounds(10, 240, 295, 36);
-		panelPersonalInformation.add(birthDate);
-		
-		panelEmergencyContact = new JPanel();
-		panelEmergencyContact.setBounds(687, 177, 315, 370);
-		panelInformation.add(panelEmergencyContact);
-		panelEmergencyContact.setLayout(null);
-		
-		JLabel lblEmergencyContactInformation = new JLabel("Emergency Contact Information");
-		lblEmergencyContactInformation.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEmergencyContactInformation.setForeground(Color.BLACK);
-		lblEmergencyContactInformation.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblEmergencyContactInformation.setBounds(0, 0, 315, 36);
-		panelEmergencyContact.add(lblEmergencyContactInformation);
-		
-		JLabel lblNewLabel_1_4_1 = new JLabel("Name");
-		lblNewLabel_1_4_1.setForeground(Color.BLACK);
-		lblNewLabel_1_4_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_1_4_1.setBounds(10, 62, 295, 20);
-		panelEmergencyContact.add(lblNewLabel_1_4_1);
-		
-		JLabel lblNewLabel_1_5_1 = new JLabel("Phone/Telephone Number");
-		lblNewLabel_1_5_1.setForeground(Color.BLACK);
-		lblNewLabel_1_5_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_1_5_1.setBounds(10, 139, 295, 20);
-		panelEmergencyContact.add(lblNewLabel_1_5_1);
-		
-		panelEmergencyName = new JPanel();
-		panelEmergencyName.setLayout(null);
-		panelEmergencyName.setBorder(new LineBorder(new Color(0, 153, 255), 2, true));
-		panelEmergencyName.setBackground(Color.WHITE);
-		panelEmergencyName.setBounds(10, 83, 295, 36);
-		panelEmergencyContact.add(panelEmergencyName);
-		
-		txtEmName = new JTextField();
-		txtEmName.setSelectionColor(new Color(0, 102, 255));
-		txtEmName.setSelectedTextColor(Color.WHITE);
-		txtEmName.setOpaque(false);
-		txtEmName.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		txtEmName.setColumns(10);
-		txtEmName.setBorder(null);
-		txtEmName.setBounds(10, 0, 275, 36);
-		panelEmergencyName.add(txtEmName);
-		
-		panelEmergencyPhone = new JPanel();
-		panelEmergencyPhone.setLayout(null);
-		panelEmergencyPhone.setBorder(new LineBorder(new Color(0, 153, 255), 2, true));
-		panelEmergencyPhone.setBackground(Color.WHITE);
-		panelEmergencyPhone.setBounds(10, 160, 295, 36);
-		panelEmergencyContact.add(panelEmergencyPhone);
-		
-		txtEmPhone = new JTextField();
-		txtEmPhone.setSelectionColor(new Color(0, 102, 255));
-		txtEmPhone.setSelectedTextColor(Color.WHITE);
-		txtEmPhone.setOpaque(false);
-		txtEmPhone.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		txtEmPhone.setColumns(10);
-		txtEmPhone.setBorder(null);
-		txtEmPhone.setBounds(10, 0, 275, 36);
-		panelEmergencyPhone.add(txtEmPhone);
-		
-		JLabel lblNewLabel_1_4_1_1 = new JLabel("E-mail");
-		lblNewLabel_1_4_1_1.setForeground(Color.BLACK);
-		lblNewLabel_1_4_1_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_1_4_1_1.setBounds(10, 219, 295, 20);
-		panelEmergencyContact.add(lblNewLabel_1_4_1_1);
-		
-		panelEmergencyEmail = new JPanel();
-		panelEmergencyEmail.setLayout(null);
-		panelEmergencyEmail.setBorder(new LineBorder(new Color(0, 153, 255), 2, true));
-		panelEmergencyEmail.setBackground(Color.WHITE);
-		panelEmergencyEmail.setBounds(10, 240, 295, 36);
-		panelEmergencyContact.add(panelEmergencyEmail);
-		
-		txtEmMail = new JTextField();
-		txtEmMail.setSelectionColor(new Color(0, 102, 255));
-		txtEmMail.setSelectedTextColor(Color.WHITE);
-		txtEmMail.setOpaque(false);
-		txtEmMail.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		txtEmMail.setColumns(10);
-		txtEmMail.setBorder(null);
-		txtEmMail.setBounds(10, 0, 275, 36);
-		panelEmergencyEmail.add(txtEmMail);
-		
-		panelPrimaryContact = new JPanel();
-		panelPrimaryContact.setBounds(351, 177, 315, 370);
-		panelInformation.add(panelPrimaryContact);
-		panelPrimaryContact.setLayout(null);
-		
-		JLabel lblPrimaryContactInformation = new JLabel("Primary Contact Information");
-		lblPrimaryContactInformation.setHorizontalAlignment(SwingConstants.CENTER);
-		lblPrimaryContactInformation.setForeground(Color.BLACK);
-		lblPrimaryContactInformation.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblPrimaryContactInformation.setBounds(0, 0, 315, 36);
-		panelPrimaryContact.add(lblPrimaryContactInformation);
-		
-		JLabel lblNewLabel_1_4 = new JLabel("Phone/Telephone Number");
-		lblNewLabel_1_4.setForeground(Color.BLACK);
-		lblNewLabel_1_4.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_1_4.setBounds(10, 62, 295, 20);
-		panelPrimaryContact.add(lblNewLabel_1_4);
-		
-		panelPhone = new JPanel();
-		panelPhone.setLayout(null);
-		panelPhone.setBorder(new LineBorder(new Color(0, 153, 255), 2, true));
-		panelPhone.setBackground(Color.WHITE);
-		panelPhone.setBounds(10, 83, 295, 36);
-		panelPrimaryContact.add(panelPhone);
-		
-		txtPhone = new JTextField();
-		txtPhone.setSelectedTextColor(Color.WHITE);
-		txtPhone.setSelectionColor(new Color(0, 102, 255));
-		txtPhone.setOpaque(false);
-		txtPhone.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		txtPhone.setColumns(10);
-		txtPhone.setBorder(null);
-		txtPhone.setBounds(10, 0, 275, 36);
-		panelPhone.add(txtPhone);
-		
-		JLabel lblNewLabel_1_5 = new JLabel("E-mail");
-		lblNewLabel_1_5.setForeground(Color.BLACK);
-		lblNewLabel_1_5.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_1_5.setBounds(10, 139, 295, 20);
-		panelPrimaryContact.add(lblNewLabel_1_5);
-		
-		panelEmail = new JPanel();
-		panelEmail.setLayout(null);
-		panelEmail.setBorder(new LineBorder(new Color(0, 153, 255), 2, true));
-		panelEmail.setBackground(Color.WHITE);
-		panelEmail.setBounds(10, 160, 295, 36);
-		panelPrimaryContact.add(panelEmail);
-		
-		txtMail = new JTextField();
-		txtMail.setSelectedTextColor(Color.WHITE);
-		txtMail.setSelectionColor(new Color(0, 102, 255));
-		txtMail.setOpaque(false);
-		txtMail.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		txtMail.setColumns(10);
-		txtMail.setBorder(null);
-		txtMail.setBounds(10, 0, 275, 36);
-		panelEmail.add(txtMail);
-		
-		JLabel lblNewLabel_1_6 = new JLabel("Passport Number");
-		lblNewLabel_1_6.setForeground(Color.BLACK);
-		lblNewLabel_1_6.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_1_6.setBounds(10, 219, 295, 20);
-		panelPrimaryContact.add(lblNewLabel_1_6);
-		
-		panelPassportNo = new JPanel();
-		panelPassportNo.setLayout(null);
-		panelPassportNo.setBorder(new LineBorder(new Color(0, 153, 255), 2, true));
-		panelPassportNo.setBackground(Color.WHITE);
-		panelPassportNo.setBounds(10, 240, 295, 36);
-		panelPrimaryContact.add(panelPassportNo);
-		
-		txtPassport = new JTextField();
-		txtPassport.setSelectedTextColor(Color.WHITE);
-		txtPassport.setSelectionColor(new Color(0, 102, 255));
-		txtPassport.setOpaque(false);
-		txtPassport.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		txtPassport.setColumns(10);
-		txtPassport.setBorder(null);
-		txtPassport.setBounds(10, 0, 275, 36);
-		panelPassportNo.add(txtPassport);
-		
-		passportExpiry = new JDateChooser();
-		dateformat3 = new SimpleDateFormat("yyyy-MM-dd");
-		passportExpiry.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		passportExpiry.setBorder(new LineBorder(new Color(0, 153, 255), 2, true));
-		passportExpiry.setBackground(Color.WHITE);
-		passportExpiry.setBounds(10, 320, 159, 36);
-		panelPrimaryContact.add(passportExpiry);
-		
-		JLabel lblNewLabel_1_2_1 = new JLabel("Passport Expiry Date");
-		lblNewLabel_1_2_1.setForeground(Color.BLACK);
-		lblNewLabel_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_1_2_1.setBounds(10, 299, 159, 20);
-		panelPrimaryContact.add(lblNewLabel_1_2_1);
-		
-		panelCountryCode = new JPanel();
-		panelCountryCode.setBorder(new LineBorder(new Color(0, 153, 255), 2, true));
-		panelCountryCode.setBackground(Color.WHITE);
-		panelCountryCode.setBounds(179, 320, 126, 36);
-		panelPrimaryContact.add(panelCountryCode);
-		panelCountryCode.setLayout(null);
-		
-		txtCode = new JTextField();
-		txtCode.setSelectedTextColor(Color.WHITE);
-		txtCode.setSelectionColor(new Color(0, 102, 255));
-		txtCode.setOpaque(false);
-		txtCode.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		txtCode.setBorder(null);
-		txtCode.setBackground(Color.WHITE);
-		txtCode.setBounds(44, 0, 72, 36);
-		panelCountryCode.add(txtCode);
-		txtCode.setColumns(10);
-		
-		txtPlus = new JTextField();
-		txtPlus.setSelectedTextColor(Color.WHITE);
-		txtPlus.setSelectionColor(new Color(51, 51, 255));
-		txtPlus.setHorizontalAlignment(SwingConstants.CENTER);
-		txtPlus.setText("+");
-		txtPlus.setOpaque(false);
-		txtPlus.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		txtPlus.setEditable(false);
-		txtPlus.setBorder(null);
-		txtPlus.setBackground(Color.WHITE);
-		txtPlus.setBounds(10, 0, 36, 36);
-		panelCountryCode.add(txtPlus);
-		txtPlus.setColumns(10);
-		
-		JLabel lblNewLabel_2 = new JLabel("Country Code");
-		lblNewLabel_2.setForeground(Color.BLACK);
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_2.setBounds(179, 299, 126, 20);
-		panelPrimaryContact.add(lblNewLabel_2);
-		
-		btnBack = new JButton("Previous");
-		btnBack.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				switchPanels(panelSearchFlight);
-			}
-		});
-		btnBack.setBackground(new Color(51, 51, 204));
-		btnBack.setForeground(Color.WHITE);
-		btnBack.setFont(new Font("Trebuchet MS", Font.PLAIN, 30));
-		btnBack.setBounds(92, 621, 276, 56);
-		panelInformation.add(btnBack);
-		
-		checkConfirm = new JCheckBox("I declare that the given information about me are all matches with the passport and nothing is false");
-		checkConfirm.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(checkConfirm.isSelected()) {
-					btnNext.setEnabled(true);
-				}
-				else {
-					btnNext.setEnabled(false);
-				}
-			}
-		});
-		checkConfirm.setFocusPainted(false);
-		checkConfirm.setForeground(Color.WHITE);
-		checkConfirm.setOpaque(false);
-		checkConfirm.setFont(new Font("SolaimanLipi", Font.PLAIN, 14));
-		checkConfirm.setBounds(14, 563, 649, 23);
-		panelInformation.add(checkConfirm);
-		
-		btnNext = new JButton("Continue");
-		btnNext.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				name = txtName.getText();
-				gender = genderBox.getSelectedItem().toString();
-				birth = dateformat.format(birthDate.getDate()); 
-				nation = txtNation.getText();
-				phone = txtPhone.getText();
-				mail = txtMail.getText();
-				pass_no = txtPassport.getText();
-				pass_exp = dateformat3.format(passportExpiry.getDate());
-				country_code = txtPlus.getText() + txtCode.getText();
-				em_name = txtEmName.getText();
-				em_phn = txtEmPhone.getText();
-				em_mail = txtEmMail.getText();
-				from = fromBox.getSelectedItem().toString();
-				to = toBox.getSelectedItem().toString();
-				trip_type = tripBox.getSelectedItem().toString();
-				s_date = dateformat1.format(depDate.getDate());
-				//r_date = dateformat2.format(retDate.getDate());
-				seat_class = classBox.getSelectedItem().toString();
-				
-				if(tripBox.getSelectedItem().toString().equals("Return")) {
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnA1.isSelected()) {
+					ans = btnA1.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("insert into ticket_booking(Name,Gender,BirthDate,Nationality,Phone,Email,Passport_No,Expiry,CountryCode,Emergency_Name,Emergency_Phone,Emergency_Email,Starting_From,Destination,Trip,Starting_Date,Flight_Name,Serial_No,TakeOf,Seat_Class)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-						pst.setString(1, name);
-						pst.setString(2, gender);
-						pst.setString(3, birth);
-						pst.setString(4, nation);
-						pst.setString(5, phone);
-						pst.setString(6, mail);
-						pst.setString(7, pass_no);
-						pst.setString(8, pass_exp);
-						pst.setString(9, country_code);
-						pst.setString(10, em_name);
-						pst.setString(11, em_phn);
-						pst.setString(12, em_mail);
-						pst.setString(13, from);
-						pst.setString(14, to);
-						pst.setString(15, trip_type);
-						pst.setString(16, s_date);
-						pst.setString(17, flight);
-						pst.setString(18, fl_serial);
-						pst.setString(19, takeof);
-						pst.setString(20, seat_class);
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
 						pst.executeUpdate();
-						
-						JOptionPane.showMessageDialog(null, "Flight Added Successfully!");
-						dispose();
-						com.alpha.bookflight.bookseat bs = new com.alpha.bookflight.bookseat();
-						bs.setVisible(true);
-						
+					} catch (SQLException e1) {
+
 					}
-					catch(SQLException e1) {
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
-				else if(tripBox.getSelectedItem().toString().equals("One Way")||tripBox.getSelectedItem().toString().equals("Multi Way")) {
+			}
+		});
+		btnA1.setContentAreaFilled(false);
+		btnA1.setOpaque(true);
+		btnA1.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnA1.setForeground(new Color(0, 0, 0));
+		btnA1.setBackground(new Color(51, 204, 0));
+		btnA1.setBounds(54, 62, 55, 45);
+		contentPane.add(btnA1);
+
+		btnA2 = new JToggleButton("A2");
+		btnA2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnA2.isSelected()) {
+					ans = btnA2.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("insert into ticket_booking(Name,Gender,BirthDate,Nationality,Phone,Email,Passport_No,Expiry,CountryCode,Emergency_Name,Emergency_Phone,Emergency_Email,Starting_From,Destination,Trip,Starting_Date,Return_Date,Flight_Name,Serial_No,TakeOf,Seat_Class)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-						pst.setString(1, name);
-						pst.setString(2, gender);
-						pst.setString(3, birth);
-						pst.setString(4, nation);
-						pst.setString(5, phone);
-						pst.setString(6, mail);
-						pst.setString(7, pass_no);
-						pst.setString(8, pass_exp);
-						pst.setString(9, country_code);
-						pst.setString(10, em_name);
-						pst.setString(11, em_phn);
-						pst.setString(12, em_mail);
-						pst.setString(13, from);
-						pst.setString(14, to);
-						pst.setString(15, trip_type);
-						pst.setString(16, s_date);
-						pst.setString(17, r_date);
-						pst.setString(18, flight);
-						pst.setString(19, fl_serial);
-						pst.setString(20, takeof);
-						pst.setString(21, seat_class);
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
 						pst.executeUpdate();
-						
-						JOptionPane.showMessageDialog(null, "Flight Added Successfully!");
-						dispose();
-						com.alpha.bookflight.bookseat bs = new com.alpha.bookflight.bookseat();
-						bs.setVisible(true);
-						
+					} catch (SQLException e1) {
+
 					}
-					catch(SQLException e1) {
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
-				
 			}
 		});
-		btnNext.setEnabled(false);
-		btnNext.setForeground(Color.WHITE);
-		btnNext.setFont(new Font("Trebuchet MS", Font.PLAIN, 30));
-		btnNext.setBackground(new Color(51, 51, 204));
-		btnNext.setBounds(426, 621, 276, 56);
-		panelInformation.add(btnNext);
-		
-		/*____________________________Payment Panel________________________________*/
-		
-		panelPayment = new JPanel();
-		panelPayment.setBackground(new Color(0, 0, 51));
-		panelPayment.setBorder(new LineBorder(new Color(0, 51, 204), 2, true));
-		layeredPane.add(panelPayment, "name_16398071427094");
+		btnA2.setContentAreaFilled(false);
+		btnA2.setOpaque(true);
+		btnA2.setForeground(Color.BLACK);
+		btnA2.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnA2.setBackground(new Color(51, 204, 0));
+		btnA2.setBounds(119, 62, 55, 45);
+		contentPane.add(btnA2);
+
+		btnA4 = new JToggleButton("A4");
+		btnA4.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnA4.isSelected()) {
+					ans = btnA4.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnA4.setContentAreaFilled(false);
+		btnA4.setOpaque(true);
+		btnA4.setForeground(Color.BLACK);
+		btnA4.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnA4.setBackground(new Color(51, 204, 0));
+		btnA4.setBounds(249, 62, 55, 45);
+		contentPane.add(btnA4);
+
+		btnA3 = new JToggleButton("A3");
+		btnA3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnA3.isSelected()) {
+					ans = btnA3.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnA3.setContentAreaFilled(false);
+		btnA3.setOpaque(true);
+		btnA3.setForeground(Color.BLACK);
+		btnA3.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnA3.setBackground(new Color(51, 204, 0));
+		btnA3.setBounds(184, 62, 55, 45);
+		contentPane.add(btnA3);
+
+		btnA6 = new JToggleButton("A6");
+		btnA6.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnA6.isSelected()) {
+					ans = btnA6.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnA6.setContentAreaFilled(false);
+		btnA6.setOpaque(true);
+		btnA6.setForeground(Color.BLACK);
+		btnA6.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnA6.setBackground(new Color(51, 204, 0));
+		btnA6.setBounds(379, 62, 55, 45);
+		contentPane.add(btnA6);
+
+		btnA5 = new JToggleButton("A5");
+		btnA5.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnA5.isSelected()) {
+					ans = btnA5.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnA5.setContentAreaFilled(false);
+		btnA5.setOpaque(true);
+		btnA5.setForeground(Color.BLACK);
+		btnA5.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnA5.setBackground(new Color(51, 204, 0));
+		btnA5.setBounds(314, 62, 55, 45);
+		contentPane.add(btnA5);
+
+		btnA8 = new JToggleButton("A8");
+		btnA8.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnA8.isSelected()) {
+					ans = btnA8.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnA8.setContentAreaFilled(false);
+		btnA8.setOpaque(true);
+		btnA8.setForeground(Color.BLACK);
+		btnA8.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnA8.setBackground(new Color(51, 204, 0));
+		btnA8.setBounds(509, 62, 55, 45);
+		contentPane.add(btnA8);
+
+		btnA7 = new JToggleButton("A7");
+		btnA7.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnA7.isSelected()) {
+					ans = btnA7.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnA7.setContentAreaFilled(false);
+		btnA7.setOpaque(true);
+		btnA7.setForeground(Color.BLACK);
+		btnA7.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnA7.setBackground(new Color(51, 204, 0));
+		btnA7.setBounds(444, 62, 55, 45);
+		contentPane.add(btnA7);
+
+		btnA10 = new JToggleButton("A10");
+		btnA10.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnA10.isSelected()) {
+					ans = btnA10.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnA10.setContentAreaFilled(false);
+		btnA10.setOpaque(true);
+		btnA10.setForeground(Color.BLACK);
+		btnA10.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnA10.setBackground(new Color(51, 204, 0));
+		btnA10.setBounds(639, 62, 55, 45);
+		contentPane.add(btnA10);
+
+		btnA9 = new JToggleButton("A9");
+		btnA9.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnA9.isSelected()) {
+					ans = btnA9.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnA9.setContentAreaFilled(false);
+		btnA9.setOpaque(true);
+		btnA9.setForeground(Color.BLACK);
+		btnA9.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnA9.setBackground(new Color(51, 204, 0));
+		btnA9.setBounds(574, 62, 55, 45);
+		contentPane.add(btnA9);
+
+		btnA12 = new JToggleButton("A12");
+		btnA12.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnA12.isSelected()) {
+					ans = btnA12.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnA12.setContentAreaFilled(false);
+		btnA12.setOpaque(true);
+		btnA12.setForeground(Color.BLACK);
+		btnA12.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnA12.setBackground(new Color(51, 204, 0));
+		btnA12.setBounds(769, 62, 55, 45);
+		contentPane.add(btnA12);
+
+		btnA11 = new JToggleButton("A11");
+		btnA11.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnA11.isSelected()) {
+					ans = btnA11.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnA11.setContentAreaFilled(false);
+		btnA11.setOpaque(true);
+		btnA11.setForeground(Color.BLACK);
+		btnA11.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnA11.setBackground(new Color(51, 204, 0));
+		btnA11.setBounds(704, 62, 55, 45);
+		contentPane.add(btnA11);
+
+		btnA14 = new JToggleButton("A14");
+		btnA14.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnA14.isSelected()) {
+					ans = btnA14.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnA14.setContentAreaFilled(false);
+		btnA14.setOpaque(true);
+		btnA14.setForeground(Color.BLACK);
+		btnA14.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnA14.setBackground(new Color(51, 204, 0));
+		btnA14.setBounds(899, 62, 55, 45);
+		contentPane.add(btnA14);
+
+		btnA13 = new JToggleButton("A13");
+		btnA13.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnA13.isSelected()) {
+					ans = btnA13.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnA13.setContentAreaFilled(false);
+		btnA13.setOpaque(true);
+		btnA13.setForeground(Color.BLACK);
+		btnA13.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnA13.setBackground(new Color(51, 204, 0));
+		btnA13.setBounds(834, 62, 55, 45);
+		contentPane.add(btnA13);
+
+		btnB14 = new JToggleButton("B14");
+		btnB14.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnB14.isSelected()) {
+					ans = btnB14.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnB14.setContentAreaFilled(false);
+		btnB14.setOpaque(true);
+		btnB14.setForeground(Color.BLACK);
+		btnB14.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnB14.setBackground(new Color(51, 204, 0));
+		btnB14.setBounds(899, 118, 55, 45);
+		contentPane.add(btnB14);
+
+		btnB13 = new JToggleButton("B13");
+		btnB13.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnB13.isSelected()) {
+					ans = btnB13.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnB13.setContentAreaFilled(false);
+		btnB13.setOpaque(true);
+		btnB13.setForeground(Color.BLACK);
+		btnB13.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnB13.setBackground(new Color(51, 204, 0));
+		btnB13.setBounds(834, 118, 55, 45);
+		contentPane.add(btnB13);
+
+		btnB12 = new JToggleButton("B12");
+		btnB12.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnB12.isSelected()) {
+					ans = btnB12.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnB12.setContentAreaFilled(false);
+		btnB12.setOpaque(true);
+		btnB12.setForeground(Color.BLACK);
+		btnB12.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnB12.setBackground(new Color(51, 204, 0));
+		btnB12.setBounds(769, 118, 55, 45);
+		contentPane.add(btnB12);
+
+		btnB11 = new JToggleButton("B11");
+		btnB11.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnB11.isSelected()) {
+					ans = btnB11.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnB11.setContentAreaFilled(false);
+		btnB11.setOpaque(true);
+		btnB11.setForeground(Color.BLACK);
+		btnB11.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnB11.setBackground(new Color(51, 204, 0));
+		btnB11.setBounds(704, 118, 55, 45);
+		contentPane.add(btnB11);
+
+		btnB10 = new JToggleButton("B10");
+		btnB10.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnB10.isSelected()) {
+					ans = btnB10.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnB10.setContentAreaFilled(false);
+		btnB10.setOpaque(true);
+		btnB10.setForeground(Color.BLACK);
+		btnB10.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnB10.setBackground(new Color(51, 204, 0));
+		btnB10.setBounds(639, 118, 55, 45);
+		contentPane.add(btnB10);
+
+		btnB9 = new JToggleButton("B9");
+		btnB9.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnB9.isSelected()) {
+					ans = btnB9.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnB9.setContentAreaFilled(false);
+		btnB9.setOpaque(true);
+		btnB9.setForeground(Color.BLACK);
+		btnB9.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnB9.setBackground(new Color(51, 204, 0));
+		btnB9.setBounds(574, 118, 55, 45);
+		contentPane.add(btnB9);
+
+		btnB8 = new JToggleButton("B8");
+		btnB8.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnB8.isSelected()) {
+					ans = btnB8.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnB8.setContentAreaFilled(false);
+		btnB8.setOpaque(true);
+		btnB8.setForeground(Color.BLACK);
+		btnB8.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnB8.setBackground(new Color(51, 204, 0));
+		btnB8.setBounds(509, 118, 55, 45);
+		contentPane.add(btnB8);
+
+		btnB7 = new JToggleButton("B7");
+		btnB7.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnB7.isSelected()) {
+					ans = btnB7.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnB7.setContentAreaFilled(false);
+		btnB7.setOpaque(true);
+		btnB7.setForeground(Color.BLACK);
+		btnB7.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnB7.setBackground(new Color(51, 204, 0));
+		btnB7.setBounds(444, 118, 55, 45);
+		contentPane.add(btnB7);
+
+		btnB6 = new JToggleButton("B6");
+		btnB6.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnB6.isSelected()) {
+					ans = btnB6.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnB6.setContentAreaFilled(false);
+		btnB6.setOpaque(true);
+		btnB6.setForeground(Color.BLACK);
+		btnB6.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnB6.setBackground(new Color(51, 204, 0));
+		btnB6.setBounds(379, 118, 55, 45);
+		contentPane.add(btnB6);
+
+		btnB5 = new JToggleButton("B5");
+		btnB5.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnB5.isSelected()) {
+					ans = btnB5.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnB5.setContentAreaFilled(false);
+		btnB5.setOpaque(true);
+		btnB5.setForeground(Color.BLACK);
+		btnB5.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnB5.setBackground(new Color(51, 204, 0));
+		btnB5.setBounds(314, 118, 55, 45);
+		contentPane.add(btnB5);
+
+		btnB4 = new JToggleButton("B4");
+		btnB4.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnB4.isSelected()) {
+					ans = btnB4.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnB4.setContentAreaFilled(false);
+		btnB4.setOpaque(true);
+		btnB4.setForeground(Color.BLACK);
+		btnB4.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnB4.setBackground(new Color(51, 204, 0));
+		btnB4.setBounds(249, 118, 55, 45);
+		contentPane.add(btnB4);
+
+		btnB3 = new JToggleButton("B3");
+		btnB3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnB3.isSelected()) {
+					ans = btnB3.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnB3.setContentAreaFilled(false);
+		btnB3.setOpaque(true);
+		btnB3.setForeground(Color.BLACK);
+		btnB3.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnB3.setBackground(new Color(51, 204, 0));
+		btnB3.setBounds(184, 118, 55, 45);
+		contentPane.add(btnB3);
+
+		btnB2 = new JToggleButton("B2");
+		btnB2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnB2.isSelected()) {
+					ans = btnB2.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnB2.setContentAreaFilled(false);
+		btnB2.setOpaque(true);
+		btnB2.setForeground(Color.BLACK);
+		btnB2.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnB2.setBackground(new Color(51, 204, 0));
+		btnB2.setBounds(119, 118, 55, 45);
+		contentPane.add(btnB2);
+
+		btnB1 = new JToggleButton("B1");
+		btnB1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnB1.isSelected()) {
+					ans = btnB1.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnB1.setContentAreaFilled(false);
+		btnB1.setOpaque(true);
+		btnB1.setForeground(Color.BLACK);
+		btnB1.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnB1.setBackground(new Color(51, 204, 0));
+		btnB1.setBounds(54, 118, 55, 45);
+		contentPane.add(btnB1);
+
+		btnC14 = new JToggleButton("C14");
+		btnC14.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnC14.isSelected()) {
+					ans = btnC14.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnC14.setContentAreaFilled(false);
+		btnC14.setOpaque(true);
+		btnC14.setForeground(Color.BLACK);
+		btnC14.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnC14.setBackground(new Color(51, 204, 0));
+		btnC14.setBounds(899, 174, 55, 45);
+		contentPane.add(btnC14);
+
+		btnC13 = new JToggleButton("C13");
+		btnC13.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnC13.isSelected()) {
+					ans = btnC13.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnC13.setContentAreaFilled(false);
+		btnC13.setOpaque(true);
+		btnC13.setForeground(Color.BLACK);
+		btnC13.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnC13.setBackground(new Color(51, 204, 0));
+		btnC13.setBounds(834, 174, 55, 45);
+		contentPane.add(btnC13);
+
+		btnC12 = new JToggleButton("C12");
+		btnC12.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnC12.isSelected()) {
+					ans = btnC12.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnC12.setContentAreaFilled(false);
+		btnC12.setOpaque(true);
+		btnC12.setForeground(Color.BLACK);
+		btnC12.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnC12.setBackground(new Color(51, 204, 0));
+		btnC12.setBounds(769, 174, 55, 45);
+		contentPane.add(btnC12);
+
+		btnC11 = new JToggleButton("C11");
+		btnC11.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnC11.isSelected()) {
+					ans = btnC11.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnC11.setContentAreaFilled(false);
+		btnC11.setOpaque(true);
+		btnC11.setForeground(Color.BLACK);
+		btnC11.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnC11.setBackground(new Color(51, 204, 0));
+		btnC11.setBounds(704, 174, 55, 45);
+		contentPane.add(btnC11);
+
+		btnC10 = new JToggleButton("C10");
+		btnC10.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnC10.isSelected()) {
+					ans = btnC10.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnC10.setContentAreaFilled(false);
+		btnC10.setOpaque(true);
+		btnC10.setForeground(Color.BLACK);
+		btnC10.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnC10.setBackground(new Color(51, 204, 0));
+		btnC10.setBounds(639, 174, 55, 45);
+		contentPane.add(btnC10);
+
+		btnC9 = new JToggleButton("C9");
+		btnC9.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnC9.isSelected()) {
+					ans = btnC9.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnC9.setContentAreaFilled(false);
+		btnC9.setOpaque(true);
+		btnC9.setForeground(Color.BLACK);
+		btnC9.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnC9.setBackground(new Color(51, 204, 0));
+		btnC9.setBounds(574, 174, 55, 45);
+		contentPane.add(btnC9);
+
+		btnC8 = new JToggleButton("C8");
+		btnC8.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnC8.isSelected()) {
+					ans = btnC8.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnC8.setContentAreaFilled(false);
+		btnC8.setOpaque(true);
+		btnC8.setForeground(Color.BLACK);
+		btnC8.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnC8.setBackground(new Color(51, 204, 0));
+		btnC8.setBounds(509, 174, 55, 45);
+		contentPane.add(btnC8);
+
+		btnC7 = new JToggleButton("C7");
+		btnC7.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnC7.isSelected()) {
+					if (btnC7.isSelected()) {
+						ans = btnC7.getText();
+						String name = com.alpha.bookflight.otherInformations.name;
+						String nat = com.alpha.bookflight.otherInformations.nation;
+						String pass = com.alpha.bookflight.otherInformations.pass_no;
+						String fn = com.alpha.bookflight.otherInformations.flight;
+						try {
+							pst = con.prepareStatement(
+									"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+							pst.setString(1, ans);
+							pst.setString(2, name);
+							pst.setString(3, nat);
+							pst.setString(4, pass);
+							pst.setString(5, fn);
+
+							pst.executeUpdate();
+						} catch (SQLException e1) {
+
+						}
+					} else {
+						try {
+							pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+							pst.setNull(1, Types.NULL);
+							pst.executeUpdate();
+						} catch (SQLException e1) {
+							e1.printStackTrace();
+						}
+					}
+				}
+			}
+		});
+		btnC7.setContentAreaFilled(false);
+		btnC7.setOpaque(true);
+		btnC7.setForeground(Color.BLACK);
+		btnC7.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnC7.setBackground(new Color(51, 204, 0));
+		btnC7.setBounds(444, 174, 55, 45);
+		contentPane.add(btnC7);
+
+		btnC6 = new JToggleButton("C6");
+		btnC6.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnC6.isSelected()) {
+					ans = btnC6.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnC6.setContentAreaFilled(false);
+		btnC6.setOpaque(true);
+		btnC6.setForeground(Color.BLACK);
+		btnC6.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnC6.setBackground(new Color(51, 204, 0));
+		btnC6.setBounds(379, 174, 55, 45);
+		contentPane.add(btnC6);
+
+		btnC5 = new JToggleButton("C5");
+		btnC5.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnC5.isSelected()) {
+					ans = btnC5.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnC5.setContentAreaFilled(false);
+		btnC5.setOpaque(true);
+		btnC5.setForeground(Color.BLACK);
+		btnC5.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnC5.setBackground(new Color(51, 204, 0));
+		btnC5.setBounds(314, 174, 55, 45);
+		contentPane.add(btnC5);
+
+		btnC4 = new JToggleButton("C4");
+		btnC4.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnC4.isSelected()) {
+					ans = btnC4.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnC4.setContentAreaFilled(false);
+		btnC4.setOpaque(true);
+		btnC4.setForeground(Color.BLACK);
+		btnC4.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnC4.setBackground(new Color(51, 204, 0));
+		btnC4.setBounds(249, 174, 55, 45);
+		contentPane.add(btnC4);
+
+		btnC3 = new JToggleButton("C3");
+		btnC3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnC3.isSelected()) {
+					ans = btnC3.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnC3.setContentAreaFilled(false);
+		btnC3.setOpaque(true);
+		btnC3.setForeground(Color.BLACK);
+		btnC3.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnC3.setBackground(new Color(51, 204, 0));
+		btnC3.setBounds(184, 174, 55, 45);
+		contentPane.add(btnC3);
+
+		btnC2 = new JToggleButton("C2");
+		btnC2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnC2.isSelected()) {
+					ans = btnC2.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnC2.setContentAreaFilled(false);
+		btnC2.setOpaque(true);
+		btnC2.setForeground(Color.BLACK);
+		btnC2.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnC2.setBackground(new Color(51, 204, 0));
+		btnC2.setBounds(119, 174, 55, 45);
+		contentPane.add(btnC2);
+
+		btnC1 = new JToggleButton("C1");
+		btnC1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnC1.isSelected()) {
+					ans = btnC1.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnC1.setContentAreaFilled(false);
+		btnC1.setOpaque(true);
+		btnC1.setForeground(Color.BLACK);
+		btnC1.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnC1.setBackground(new Color(51, 204, 0));
+		btnC1.setBounds(54, 174, 55, 45);
+		contentPane.add(btnC1);
+
+		btnH1 = new JToggleButton("H1");
+		btnH1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnH1.isSelected()) {
+					ans = btnH1.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnH1.setContentAreaFilled(false);
+		btnH1.setOpaque(true);
+		btnH1.setForeground(Color.BLACK);
+		btnH1.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnH1.setBackground(new Color(51, 204, 0));
+		btnH1.setBounds(54, 588, 55, 45);
+		contentPane.add(btnH1);
+
+		btnG1 = new JToggleButton("G1");
+		btnG1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnG1.isSelected()) {
+					ans = btnG1.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnG1.setContentAreaFilled(false);
+		btnG1.setOpaque(true);
+		btnG1.setForeground(Color.BLACK);
+		btnG1.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnG1.setBackground(new Color(51, 204, 0));
+		btnG1.setBounds(54, 532, 55, 45);
+		contentPane.add(btnG1);
+
+		btnG2 = new JToggleButton("G2");
+		btnG2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnG2.isSelected()) {
+					ans = btnG2.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+						;
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnG2.setContentAreaFilled(false);
+		btnG2.setOpaque(true);
+		btnG2.setForeground(Color.BLACK);
+		btnG2.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnG2.setBackground(new Color(51, 204, 0));
+		btnG2.setBounds(119, 532, 55, 45);
+		contentPane.add(btnG2);
+
+		btnH2 = new JToggleButton("H2");
+		btnH2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnH2.isSelected()) {
+					ans = btnH2.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnH2.setContentAreaFilled(false);
+		btnH2.setOpaque(true);
+		btnH2.setForeground(Color.BLACK);
+		btnH2.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnH2.setBackground(new Color(51, 204, 0));
+		btnH2.setBounds(119, 588, 55, 45);
+		contentPane.add(btnH2);
+
+		btnH3 = new JToggleButton("H3");
+		btnH3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnH3.isSelected()) {
+					ans = btnH3.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnH3.setContentAreaFilled(false);
+		btnH3.setOpaque(true);
+		btnH3.setForeground(Color.BLACK);
+		btnH3.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnH3.setBackground(new Color(51, 204, 0));
+		btnH3.setBounds(184, 588, 55, 45);
+		contentPane.add(btnH3);
+
+		btnG3 = new JToggleButton("G3");
+		btnG3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnG3.isSelected()) {
+					ans = btnG3.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnG3.setContentAreaFilled(false);
+		btnG3.setOpaque(true);
+		btnG3.setForeground(Color.BLACK);
+		btnG3.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnG3.setBackground(new Color(51, 204, 0));
+		btnG3.setBounds(184, 532, 55, 45);
+		contentPane.add(btnG3);
+
+		btnG4 = new JToggleButton("G4");
+		btnG4.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnG4.isSelected()) {
+					ans = btnG4.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnG4.setContentAreaFilled(false);
+		btnG4.setOpaque(true);
+		btnG4.setForeground(Color.BLACK);
+		btnG4.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnG4.setBackground(new Color(51, 204, 0));
+		btnG4.setBounds(249, 532, 55, 45);
+		contentPane.add(btnG4);
+
+		btnH4 = new JToggleButton("H4");
+		btnH4.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnH4.isSelected()) {
+					ans = btnH4.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnH4.setContentAreaFilled(false);
+		btnH4.setOpaque(true);
+		btnH4.setForeground(Color.BLACK);
+		btnH4.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnH4.setBackground(new Color(51, 204, 0));
+		btnH4.setBounds(249, 588, 55, 45);
+		contentPane.add(btnH4);
+
+		btnH5 = new JToggleButton("H5");
+		btnH5.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnH5.isSelected()) {
+					ans = btnH5.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnH5.setContentAreaFilled(false);
+		btnH5.setOpaque(true);
+		btnH5.setForeground(Color.BLACK);
+		btnH5.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnH5.setBackground(new Color(51, 204, 0));
+		btnH5.setBounds(314, 588, 55, 45);
+		contentPane.add(btnH5);
+
+		btnG5 = new JToggleButton("G5");
+		btnG5.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnG5.isSelected()) {
+					ans = btnG5.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnG5.setContentAreaFilled(false);
+		btnG5.setOpaque(true);
+		btnG5.setForeground(Color.BLACK);
+		btnG5.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnG5.setBackground(new Color(51, 204, 0));
+		btnG5.setBounds(314, 532, 55, 45);
+		contentPane.add(btnG5);
+
+		btnG6 = new JToggleButton("G6");
+		btnG6.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnG6.isSelected()) {
+					ans = btnG6.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnG6.setContentAreaFilled(false);
+		btnG6.setOpaque(true);
+		btnG6.setForeground(Color.BLACK);
+		btnG6.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnG6.setBackground(new Color(51, 204, 0));
+		btnG6.setBounds(379, 532, 55, 45);
+		contentPane.add(btnG6);
+
+		btnH6 = new JToggleButton("H6");
+		btnH6.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnH6.isSelected()) {
+					ans = btnH6.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnH6.setContentAreaFilled(false);
+		btnH6.setOpaque(true);
+		btnH6.setForeground(Color.BLACK);
+		btnH6.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnH6.setBackground(new Color(51, 204, 0));
+		btnH6.setBounds(379, 588, 55, 45);
+		contentPane.add(btnH6);
+
+		btnH7 = new JToggleButton("H7");
+		btnH7.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnH7.isSelected()) {
+					ans = btnH7.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnH7.setContentAreaFilled(false);
+		btnH7.setOpaque(true);
+		btnH7.setForeground(Color.BLACK);
+		btnH7.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnH7.setBackground(new Color(51, 204, 0));
+		btnH7.setBounds(444, 588, 55, 45);
+		contentPane.add(btnH7);
+
+		btnG7 = new JToggleButton("G7");
+		btnG7.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnG7.isSelected()) {
+					ans = btnG7.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnG7.setContentAreaFilled(false);
+		btnG7.setOpaque(true);
+		btnG7.setForeground(Color.BLACK);
+		btnG7.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnG7.setBackground(new Color(51, 204, 0));
+		btnG7.setBounds(444, 532, 55, 45);
+		contentPane.add(btnG7);
+
+		btnH8 = new JToggleButton("H8");
+		btnH8.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnH8.isSelected()) {
+					ans = btnH8.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnH8.setContentAreaFilled(false);
+		btnH8.setOpaque(true);
+		btnH8.setForeground(Color.BLACK);
+		btnH8.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnH8.setBackground(new Color(51, 204, 0));
+		btnH8.setBounds(509, 588, 55, 45);
+		contentPane.add(btnH8);
+
+		btnG8 = new JToggleButton("G8");
+		btnG8.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnG8.isSelected()) {
+					ans = btnG8.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnG8.setContentAreaFilled(false);
+		btnG8.setOpaque(true);
+		btnG8.setForeground(Color.BLACK);
+		btnG8.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnG8.setBackground(new Color(51, 204, 0));
+		btnG8.setBounds(509, 532, 55, 45);
+		contentPane.add(btnG8);
+
+		btnG9 = new JToggleButton("G9");
+		btnG9.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnG9.isSelected()) {
+					ans = btnG9.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnG9.setContentAreaFilled(false);
+		btnG9.setOpaque(true);
+		btnG9.setForeground(Color.BLACK);
+		btnG9.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnG9.setBackground(new Color(51, 204, 0));
+		btnG9.setBounds(574, 532, 55, 45);
+		contentPane.add(btnG9);
+
+		btnH9 = new JToggleButton("H9");
+		btnH9.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnH9.isSelected()) {
+					ans = btnH9.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnH9.setContentAreaFilled(false);
+		btnH9.setOpaque(true);
+		btnH9.setForeground(Color.BLACK);
+		btnH9.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnH9.setBackground(new Color(51, 204, 0));
+		btnH9.setBounds(574, 588, 55, 45);
+		contentPane.add(btnH9);
+
+		btnH10 = new JToggleButton("H10");
+		btnH10.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnH10.isSelected()) {
+					ans = btnH10.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnH10.setContentAreaFilled(false);
+		btnH10.setOpaque(true);
+		btnH10.setForeground(Color.BLACK);
+		btnH10.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnH10.setBackground(new Color(51, 204, 0));
+		btnH10.setBounds(639, 588, 55, 45);
+		contentPane.add(btnH10);
+
+		btnG10 = new JToggleButton("G10");
+		btnG10.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnG10.isSelected()) {
+					ans = btnG10.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnG10.setContentAreaFilled(false);
+		btnG10.setOpaque(true);
+		btnG10.setForeground(Color.BLACK);
+		btnG10.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnG10.setBackground(new Color(51, 204, 0));
+		btnG10.setBounds(639, 532, 55, 45);
+		contentPane.add(btnG10);
+
+		btnG11 = new JToggleButton("G11");
+		btnG11.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnG11.isSelected()) {
+					ans = btnG11.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnG11.setContentAreaFilled(false);
+		btnG11.setOpaque(true);
+		btnG11.setForeground(Color.BLACK);
+		btnG11.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnG11.setBackground(new Color(51, 204, 0));
+		btnG11.setBounds(704, 532, 55, 45);
+		contentPane.add(btnG11);
+
+		btnH11 = new JToggleButton("H11");
+		btnH11.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnH11.isSelected()) {
+					ans = btnH11.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnH11.setContentAreaFilled(false);
+		btnH11.setOpaque(true);
+		btnH11.setForeground(Color.BLACK);
+		btnH11.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnH11.setBackground(new Color(51, 204, 0));
+		btnH11.setBounds(704, 588, 55, 45);
+		contentPane.add(btnH11);
+
+		btnH12 = new JToggleButton("H12");
+		btnH12.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnH12.isSelected()) {
+					ans = btnH12.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnH12.setContentAreaFilled(false);
+		btnH12.setOpaque(true);
+		btnH12.setForeground(Color.BLACK);
+		btnH12.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnH12.setBackground(new Color(51, 204, 0));
+		btnH12.setBounds(769, 588, 55, 45);
+		contentPane.add(btnH12);
+
+		btnG12 = new JToggleButton("G12");
+		btnG12.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnG12.isSelected()) {
+					ans = btnG12.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnG12.setContentAreaFilled(false);
+		btnG12.setOpaque(true);
+		btnG12.setForeground(Color.BLACK);
+		btnG12.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnG12.setBackground(new Color(51, 204, 0));
+		btnG12.setBounds(769, 532, 55, 45);
+		contentPane.add(btnG12);
+
+		btnG13 = new JToggleButton("G13");
+		btnG13.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnG13.isSelected()) {
+					ans = btnG13.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnG13.setContentAreaFilled(false);
+		btnG13.setOpaque(true);
+		btnG13.setForeground(Color.BLACK);
+		btnG13.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnG13.setBackground(new Color(51, 204, 0));
+		btnG13.setBounds(834, 532, 55, 45);
+		contentPane.add(btnG13);
+
+		btnH13 = new JToggleButton("H13");
+		btnH13.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnH13.isSelected()) {
+					ans = btnH13.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnH13.setContentAreaFilled(false);
+		btnH13.setOpaque(true);
+		btnH13.setForeground(Color.BLACK);
+		btnH13.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnH13.setBackground(new Color(51, 204, 0));
+		btnH13.setBounds(834, 588, 55, 45);
+		contentPane.add(btnH13);
+
+		btnH14 = new JToggleButton("H14");
+		btnH14.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnH14.isSelected()) {
+					ans = btnH14.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnH14.setContentAreaFilled(false);
+		btnH14.setOpaque(true);
+		btnH14.setForeground(Color.BLACK);
+		btnH14.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnH14.setBackground(new Color(51, 204, 0));
+		btnH14.setBounds(899, 588, 55, 45);
+		contentPane.add(btnH14);
+
+		btnG14 = new JToggleButton("G14");
+		btnG14.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnG14.isSelected()) {
+					ans = btnG14.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnG14.setContentAreaFilled(false);
+		btnG14.setOpaque(true);
+		btnG14.setForeground(Color.BLACK);
+		btnG14.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnG14.setBackground(new Color(51, 204, 0));
+		btnG14.setBounds(899, 532, 55, 45);
+		contentPane.add(btnG14);
+
+		btnF1 = new JToggleButton("F1");
+		btnF1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnF1.isSelected()) {
+					ans = btnF1.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnF1.setContentAreaFilled(false);
+		btnF1.setOpaque(true);
+		btnF1.setForeground(Color.BLACK);
+		btnF1.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnF1.setBackground(new Color(51, 204, 0));
+		btnF1.setBounds(54, 410, 55, 45);
+		contentPane.add(btnF1);
+
+		btnE1 = new JToggleButton("E1");
+		btnE1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnE1.isSelected()) {
+					ans = btnE1.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnE1.setContentAreaFilled(false);
+		btnE1.setOpaque(true);
+		btnE1.setForeground(Color.BLACK);
+		btnE1.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnE1.setBackground(new Color(51, 204, 0));
+		btnE1.setBounds(54, 354, 55, 45);
+		contentPane.add(btnE1);
+
+		btnD1 = new JToggleButton("D1");
+		btnD1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnD1.isSelected()) {
+					ans = btnD1.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnD1.setContentAreaFilled(false);
+		btnD1.setOpaque(true);
+		btnD1.setForeground(Color.BLACK);
+		btnD1.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnD1.setBackground(new Color(51, 204, 0));
+		btnD1.setBounds(54, 298, 55, 45);
+		contentPane.add(btnD1);
+
+		btnD2 = new JToggleButton("D2");
+		btnD2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnD2.isSelected()) {
+					ans = btnD2.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnD2.setContentAreaFilled(false);
+		btnD2.setOpaque(true);
+		btnD2.setForeground(Color.BLACK);
+		btnD2.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnD2.setBackground(new Color(51, 204, 0));
+		btnD2.setBounds(119, 298, 55, 45);
+		contentPane.add(btnD2);
+
+		btnE2 = new JToggleButton("E2");
+		btnE2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnE2.isSelected()) {
+					ans = btnE2.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnE2.setContentAreaFilled(false);
+		btnE2.setOpaque(true);
+		btnE2.setForeground(Color.BLACK);
+		btnE2.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnE2.setBackground(new Color(51, 204, 0));
+		btnE2.setBounds(119, 354, 55, 45);
+		contentPane.add(btnE2);
+
+		btnF2 = new JToggleButton("F2");
+		btnF2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnF2.isSelected()) {
+					ans = btnF2.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnF2.setContentAreaFilled(false);
+		btnF2.setOpaque(true);
+		btnF2.setForeground(Color.BLACK);
+		btnF2.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnF2.setBackground(new Color(51, 204, 0));
+		btnF2.setBounds(119, 410, 55, 45);
+		contentPane.add(btnF2);
+
+		btnF3 = new JToggleButton("F3");
+		btnF3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnF3.isSelected()) {
+					ans = btnF3.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnF3.setContentAreaFilled(false);
+		btnF3.setOpaque(true);
+		btnF3.setForeground(Color.BLACK);
+		btnF3.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnF3.setBackground(new Color(51, 204, 0));
+		btnF3.setBounds(184, 410, 55, 45);
+		contentPane.add(btnF3);
+
+		btnE3 = new JToggleButton("E3");
+		btnE3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnE3.isSelected()) {
+					ans = btnE3.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnE3.setContentAreaFilled(false);
+		btnE3.setOpaque(true);
+		btnE3.setForeground(Color.BLACK);
+		btnE3.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnE3.setBackground(new Color(51, 204, 0));
+		btnE3.setBounds(184, 354, 55, 45);
+		contentPane.add(btnE3);
+
+		btnD3 = new JToggleButton("D3");
+		btnD3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnD3.isSelected()) {
+					ans = btnD3.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnD3.setContentAreaFilled(false);
+		btnD3.setOpaque(true);
+		btnD3.setForeground(Color.BLACK);
+		btnD3.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnD3.setBackground(new Color(51, 204, 0));
+		btnD3.setBounds(184, 298, 55, 45);
+		contentPane.add(btnD3);
+
+		btnD4 = new JToggleButton("D4");
+		btnD4.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnD4.isSelected()) {
+					ans = btnD4.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnD4.setContentAreaFilled(false);
+		btnD4.setOpaque(true);
+		btnD4.setForeground(Color.BLACK);
+		btnD4.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnD4.setBackground(new Color(51, 204, 0));
+		btnD4.setBounds(249, 298, 55, 45);
+		contentPane.add(btnD4);
+
+		btnE4 = new JToggleButton("E4");
+		btnE4.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnE4.isSelected()) {
+					ans = btnE4.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnE4.setContentAreaFilled(false);
+		btnE4.setOpaque(true);
+		btnE4.setForeground(Color.BLACK);
+		btnE4.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnE4.setBackground(new Color(51, 204, 0));
+		btnE4.setBounds(249, 354, 55, 45);
+		contentPane.add(btnE4);
+
+		btnF4 = new JToggleButton("F4");
+		btnF4.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnF4.isSelected()) {
+					ans = btnF4.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnF4.setContentAreaFilled(false);
+		btnF4.setOpaque(true);
+		btnF4.setForeground(Color.BLACK);
+		btnF4.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnF4.setBackground(new Color(51, 204, 0));
+		btnF4.setBounds(249, 410, 55, 45);
+		contentPane.add(btnF4);
+
+		btnF5 = new JToggleButton("F5");
+		btnF5.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnF5.isSelected()) {
+					ans = btnF5.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnF5.setContentAreaFilled(false);
+		btnF5.setOpaque(true);
+		btnF5.setForeground(Color.BLACK);
+		btnF5.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnF5.setBackground(new Color(51, 204, 0));
+		btnF5.setBounds(314, 410, 55, 45);
+		contentPane.add(btnF5);
+
+		btnE5 = new JToggleButton("E5");
+		btnE5.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnE5.isSelected()) {
+					ans = btnE5.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnE5.setContentAreaFilled(false);
+		btnE5.setOpaque(true);
+		btnE5.setForeground(Color.BLACK);
+		btnE5.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnE5.setBackground(new Color(51, 204, 0));
+		btnE5.setBounds(314, 354, 55, 45);
+		contentPane.add(btnE5);
+
+		btnD5 = new JToggleButton("D5");
+		btnD5.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnD5.isSelected()) {
+					ans = btnD5.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnD5.setContentAreaFilled(false);
+		btnD5.setOpaque(true);
+		btnD5.setForeground(Color.BLACK);
+		btnD5.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnD5.setBackground(new Color(51, 204, 0));
+		btnD5.setBounds(314, 298, 55, 45);
+		contentPane.add(btnD5);
+
+		btnD6 = new JToggleButton("D6");
+		btnD6.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnD6.isSelected()) {
+					ans = btnD6.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnD6.setContentAreaFilled(false);
+		btnD6.setOpaque(true);
+		btnD6.setForeground(Color.BLACK);
+		btnD6.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnD6.setBackground(new Color(51, 204, 0));
+		btnD6.setBounds(379, 298, 55, 45);
+		contentPane.add(btnD6);
+
+		btnE6 = new JToggleButton("E6");
+		btnE6.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnE6.isSelected()) {
+					ans = btnE6.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnE6.setContentAreaFilled(false);
+		btnE6.setOpaque(true);
+		btnE6.setForeground(Color.BLACK);
+		btnE6.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnE6.setBackground(new Color(51, 204, 0));
+		btnE6.setBounds(379, 354, 55, 45);
+		contentPane.add(btnE6);
+
+		btnF6 = new JToggleButton("F6");
+		btnF6.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnF6.isSelected()) {
+					ans = btnF6.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnF6.setContentAreaFilled(false);
+		btnF6.setOpaque(true);
+		btnF6.setForeground(Color.BLACK);
+		btnF6.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnF6.setBackground(new Color(51, 204, 0));
+		btnF6.setBounds(379, 410, 55, 45);
+		contentPane.add(btnF6);
+
+		btnF7 = new JToggleButton("F7");
+		btnF7.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnF7.isSelected()) {
+					ans = btnF7.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnF7.setContentAreaFilled(false);
+		btnF7.setOpaque(true);
+		btnF7.setForeground(Color.BLACK);
+		btnF7.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnF7.setBackground(new Color(51, 204, 0));
+		btnF7.setBounds(444, 410, 55, 45);
+		contentPane.add(btnF7);
+
+		btnE7 = new JToggleButton("E7");
+		btnE7.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnE7.isSelected()) {
+					ans = btnE7.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnE7.setContentAreaFilled(false);
+		btnE7.setOpaque(true);
+		btnE7.setForeground(Color.BLACK);
+		btnE7.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnE7.setBackground(new Color(51, 204, 0));
+		btnE7.setBounds(444, 354, 55, 45);
+		contentPane.add(btnE7);
+
+		btnD7 = new JToggleButton("D7");
+		btnD7.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnD7.isSelected()) {
+					ans = btnD7.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnD7.setContentAreaFilled(false);
+		btnD7.setOpaque(true);
+		btnD7.setForeground(Color.BLACK);
+		btnD7.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnD7.setBackground(new Color(51, 204, 0));
+		btnD7.setBounds(444, 298, 55, 45);
+		contentPane.add(btnD7);
+
+		btnF8 = new JToggleButton("F8");
+		btnF8.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnF8.isSelected()) {
+					ans = btnF8.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnF8.setContentAreaFilled(false);
+		btnF8.setOpaque(true);
+		btnF8.setForeground(Color.BLACK);
+		btnF8.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnF8.setBackground(new Color(51, 204, 0));
+		btnF8.setBounds(509, 410, 55, 45);
+		contentPane.add(btnF8);
+
+		btnE8 = new JToggleButton("E8");
+		btnE8.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnE8.isSelected()) {
+					ans = btnE8.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnE8.setContentAreaFilled(false);
+		btnE8.setOpaque(true);
+		btnE8.setForeground(Color.BLACK);
+		btnE8.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnE8.setBackground(new Color(51, 204, 0));
+		btnE8.setBounds(509, 354, 55, 45);
+		contentPane.add(btnE8);
+
+		btnD8 = new JToggleButton("D8");
+		btnD8.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnD8.isSelected()) {
+					ans = btnD8.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnD8.setContentAreaFilled(false);
+		btnD8.setOpaque(true);
+		btnD8.setForeground(Color.BLACK);
+		btnD8.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnD8.setBackground(new Color(51, 204, 0));
+		btnD8.setBounds(509, 298, 55, 45);
+		contentPane.add(btnD8);
+
+		btnD9 = new JToggleButton("D9");
+		btnD9.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnD9.isSelected()) {
+					ans = btnD9.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnD9.setContentAreaFilled(false);
+		btnD9.setOpaque(true);
+		btnD9.setForeground(Color.BLACK);
+		btnD9.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnD9.setBackground(new Color(51, 204, 0));
+		btnD9.setBounds(574, 298, 55, 45);
+		contentPane.add(btnD9);
+
+		btnE9 = new JToggleButton("E9");
+		btnE9.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnE9.isSelected()) {
+					ans = btnE9.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnE9.setContentAreaFilled(false);
+		btnE9.setOpaque(true);
+		btnE9.setForeground(Color.BLACK);
+		btnE9.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnE9.setBackground(new Color(51, 204, 0));
+		btnE9.setBounds(574, 354, 55, 45);
+		contentPane.add(btnE9);
+
+		btnF9 = new JToggleButton("F9");
+		btnF9.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnF9.isSelected()) {
+					ans = btnF9.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnF9.setContentAreaFilled(false);
+		btnF9.setOpaque(true);
+		btnF9.setForeground(Color.BLACK);
+		btnF9.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnF9.setBackground(new Color(51, 204, 0));
+		btnF9.setBounds(574, 410, 55, 45);
+		contentPane.add(btnF9);
+
+		btnF10 = new JToggleButton("F10");
+		btnF10.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnF10.isSelected()) {
+					ans = btnF10.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnF10.setContentAreaFilled(false);
+		btnF10.setOpaque(true);
+		btnF10.setForeground(Color.BLACK);
+		btnF10.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnF10.setBackground(new Color(51, 204, 0));
+		btnF10.setBounds(639, 410, 55, 45);
+		contentPane.add(btnF10);
+
+		btnE10 = new JToggleButton("E10");
+		btnE10.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnE10.isSelected()) {
+					ans = btnE10.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnE10.setContentAreaFilled(false);
+		btnE10.setOpaque(true);
+		btnE10.setForeground(Color.BLACK);
+		btnE10.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnE10.setBackground(new Color(51, 204, 0));
+		btnE10.setBounds(639, 354, 55, 45);
+		contentPane.add(btnE10);
+
+		btnD10 = new JToggleButton("D10");
+		btnD10.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnD10.isSelected()) {
+					ans = btnD10.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnD10.setContentAreaFilled(false);
+		btnD10.setOpaque(true);
+		btnD10.setForeground(Color.BLACK);
+		btnD10.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnD10.setBackground(new Color(51, 204, 0));
+		btnD10.setBounds(639, 298, 55, 45);
+		contentPane.add(btnD10);
+
+		btnD11 = new JToggleButton("D11");
+		btnD11.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnD11.isSelected()) {
+					ans = btnD11.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnD11.setContentAreaFilled(false);
+		btnD11.setOpaque(true);
+		btnD11.setForeground(Color.BLACK);
+		btnD11.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnD11.setBackground(new Color(51, 204, 0));
+		btnD11.setBounds(704, 298, 55, 45);
+		contentPane.add(btnD11);
+
+		btnE11 = new JToggleButton("E11");
+		btnE11.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnE11.isSelected()) {
+					ans = btnE11.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnE11.setContentAreaFilled(false);
+		btnE11.setOpaque(true);
+		btnE11.setForeground(Color.BLACK);
+		btnE11.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnE11.setBackground(new Color(51, 204, 0));
+		btnE11.setBounds(704, 354, 55, 45);
+		contentPane.add(btnE11);
+
+		btnF11 = new JToggleButton("F11");
+		btnF11.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnF11.isSelected()) {
+					ans = btnF11.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnF11.setContentAreaFilled(false);
+		btnF11.setOpaque(true);
+		btnF11.setForeground(Color.BLACK);
+		btnF11.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnF11.setBackground(new Color(51, 204, 0));
+		btnF11.setBounds(704, 410, 55, 45);
+		contentPane.add(btnF11);
+
+		btnF12 = new JToggleButton("F12");
+		btnF12.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnF12.isSelected()) {
+					ans = btnF12.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnF12.setContentAreaFilled(false);
+		btnF12.setOpaque(true);
+		btnF12.setForeground(Color.BLACK);
+		btnF12.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnF12.setBackground(new Color(51, 204, 0));
+		btnF12.setBounds(769, 410, 55, 45);
+		contentPane.add(btnF12);
+
+		btnE12 = new JToggleButton("E12");
+		btnE12.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnE12.isSelected()) {
+					ans = btnE12.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnE12.setContentAreaFilled(false);
+		btnE12.setOpaque(true);
+		btnE12.setForeground(Color.BLACK);
+		btnE12.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnE12.setBackground(new Color(51, 204, 0));
+		btnE12.setBounds(769, 354, 55, 45);
+		contentPane.add(btnE12);
+
+		btnD12 = new JToggleButton("D12");
+		btnD12.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnD12.isSelected()) {
+					ans = btnD12.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnD12.setContentAreaFilled(false);
+		btnD12.setOpaque(true);
+		btnD12.setForeground(Color.BLACK);
+		btnD12.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnD12.setBackground(new Color(51, 204, 0));
+		btnD12.setBounds(769, 298, 55, 45);
+		contentPane.add(btnD12);
+
+		btnD13 = new JToggleButton("D13");
+		btnD13.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnD13.isSelected()) {
+					ans = btnD13.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnD13.setContentAreaFilled(false);
+		btnD13.setOpaque(true);
+		btnD13.setForeground(Color.BLACK);
+		btnD13.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnD13.setBackground(new Color(51, 204, 0));
+		btnD13.setBounds(834, 298, 55, 45);
+		contentPane.add(btnD13);
+
+		btnE13 = new JToggleButton("E13");
+		btnE13.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnE13.isSelected()) {
+					ans = btnE13.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnE13.setContentAreaFilled(false);
+		btnE13.setOpaque(true);
+		btnE13.setForeground(Color.BLACK);
+		btnE13.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnE13.setBackground(new Color(51, 204, 0));
+		btnE13.setBounds(834, 354, 55, 45);
+		contentPane.add(btnE13);
+
+		btnF13 = new JToggleButton("F13");
+		btnF13.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnF13.isSelected()) {
+					ans = btnF13.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnF13.setContentAreaFilled(false);
+		btnF13.setOpaque(true);
+		btnF13.setForeground(Color.BLACK);
+		btnF13.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnF13.setBackground(new Color(51, 204, 0));
+		btnF13.setBounds(834, 410, 55, 45);
+		contentPane.add(btnF13);
+
+		btnF14 = new JToggleButton("F14");
+		btnF14.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnF14.isSelected()) {
+					ans = btnF14.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnF14.setContentAreaFilled(false);
+		btnF14.setOpaque(true);
+		btnF14.setForeground(Color.BLACK);
+		btnF14.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnF14.setBackground(new Color(51, 204, 0));
+		btnF14.setBounds(899, 410, 55, 45);
+		contentPane.add(btnF14);
+
+		btnE14 = new JToggleButton("E14");
+		btnE14.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnE14.isSelected()) {
+					ans = btnE14.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnE14.setContentAreaFilled(false);
+		btnE14.setOpaque(true);
+		btnE14.setForeground(Color.BLACK);
+		btnE14.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnE14.setBackground(new Color(51, 204, 0));
+		btnE14.setBounds(899, 354, 55, 45);
+		contentPane.add(btnE14);
+
+		btnD14 = new JToggleButton("D14");
+		btnD14.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				if (btnD14.isSelected()) {
+					ans = btnD14.getText();
+					String name = com.alpha.bookflight.otherInformations.name;
+					String nat = com.alpha.bookflight.otherInformations.nation;
+					String pass = com.alpha.bookflight.otherInformations.pass_no;
+					String fn = com.alpha.bookflight.otherInformations.flight;
+					try {
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
+
+						pst.setString(1, ans);
+						pst.setString(2, name);
+						pst.setString(3, nat);
+						pst.setString(4, pass);
+						pst.setString(5, fn);
+
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+
+					}
+				} else {
+					try {
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
+						pst.executeUpdate();
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		btnD14.setContentAreaFilled(false);
+		btnD14.setOpaque(true);
+		btnD14.setForeground(Color.BLACK);
+		btnD14.setFont(new Font("SolaimanLipi", Font.PLAIN, 11));
+		btnD14.setBackground(new Color(51, 204, 0));
+		btnD14.setBounds(899, 298, 55, 45);
+		contentPane.add(btnD14);
 	}
 }
