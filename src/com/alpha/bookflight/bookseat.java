@@ -156,7 +156,7 @@ public class bookseat extends JFrame {
 	public bookseat() {
 		initialize();
 		connect();
-		//com.alpha.bookflight.CheckSeat.check();
+		com.alpha.bookflight.CheckSeat.check();
 	}
 
 	public static Connection con;
