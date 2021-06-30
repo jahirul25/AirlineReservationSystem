@@ -156,7 +156,7 @@ public class bookseat extends JFrame {
 	public bookseat() {
 		initialize();
 		connect();
-		com.alpha.bookflight.CheckSeat.check();
+		//com.alpha.bookflight.CheckSeat.check();
 	}
 
 	public static Connection con;
@@ -206,8 +206,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -221,12 +221,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -251,8 +250,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -266,12 +265,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -296,8 +294,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -311,12 +309,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -341,8 +338,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -356,12 +353,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -386,8 +382,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -401,12 +397,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -431,8 +426,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -446,12 +441,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -476,8 +470,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -491,12 +485,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -521,8 +514,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -536,12 +529,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -566,8 +558,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -581,12 +573,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -611,8 +602,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -626,12 +617,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -656,8 +646,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -671,12 +661,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -701,8 +690,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -716,12 +705,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -746,8 +734,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -761,12 +749,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -791,8 +778,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -806,12 +793,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -836,8 +822,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -851,12 +837,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -881,8 +866,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -896,12 +881,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -926,8 +910,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -941,12 +925,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -971,8 +954,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -986,12 +969,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1016,8 +998,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1031,12 +1013,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1061,8 +1042,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1076,12 +1057,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1106,8 +1086,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1121,12 +1101,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1151,8 +1130,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1166,12 +1145,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1196,8 +1174,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1211,12 +1189,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1241,8 +1218,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1256,12 +1233,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1286,8 +1262,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1301,12 +1277,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1331,8 +1306,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1346,12 +1321,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1376,8 +1350,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1391,12 +1365,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1421,8 +1394,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1436,12 +1409,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1466,8 +1438,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1481,12 +1453,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1511,8 +1482,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1526,12 +1497,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1556,8 +1526,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1571,12 +1541,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1601,8 +1570,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1616,12 +1585,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1646,8 +1614,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1661,12 +1629,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1691,8 +1658,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1706,12 +1673,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1736,8 +1702,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1751,12 +1717,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1782,8 +1747,8 @@ public class bookseat extends JFrame {
 						String pass = com.alpha.bookflight.otherInformations.pass_no;
 						String fn = com.alpha.bookflight.otherInformations.flight;
 						try {
-							pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-							
+							pst = con.prepareStatement(
+									"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 							pst.setString(1, ans);
 							pst.setString(2, name);
@@ -1797,12 +1762,11 @@ public class bookseat extends JFrame {
 						}
 					} else {
 						try {
-							pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-							
-							pst.setString(1, ans);
+							pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+							pst.setNull(1, Types.NULL);
 							pst.executeUpdate();
-						}
-						catch(SQLException e1) {
+						} catch (SQLException e1) {
 							e1.printStackTrace();
 						}
 					}
@@ -1828,8 +1792,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1843,12 +1807,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1873,8 +1836,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1888,12 +1851,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1918,8 +1880,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1933,12 +1895,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -1963,8 +1924,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -1978,12 +1939,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2008,8 +1968,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2023,12 +1983,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2053,8 +2012,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2068,12 +2027,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2098,8 +2056,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2113,12 +2071,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2143,8 +2100,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2158,12 +2115,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2188,8 +2144,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2203,12 +2159,12 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+						;
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2233,8 +2189,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2248,12 +2204,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2278,8 +2233,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2293,12 +2248,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2323,8 +2277,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2338,12 +2292,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2368,8 +2321,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2383,12 +2336,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2413,8 +2365,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2428,12 +2380,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2458,8 +2409,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2473,12 +2424,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2503,8 +2453,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2518,12 +2468,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2548,8 +2497,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2563,12 +2512,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2593,8 +2541,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2608,12 +2556,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2638,8 +2585,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2653,12 +2600,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2683,8 +2629,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2698,12 +2644,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2728,8 +2673,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2743,12 +2688,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2773,8 +2717,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2788,12 +2732,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2818,8 +2761,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2833,12 +2776,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2863,8 +2805,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2878,12 +2820,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2908,8 +2849,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2923,12 +2864,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2953,8 +2893,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -2968,12 +2908,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -2998,8 +2937,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3013,12 +2952,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3043,8 +2981,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3058,12 +2996,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3088,8 +3025,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3103,12 +3040,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3133,8 +3069,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3148,12 +3084,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3178,8 +3113,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3193,12 +3128,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3223,8 +3157,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3238,12 +3172,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3268,8 +3201,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3283,12 +3216,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3313,8 +3245,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3328,12 +3260,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3358,8 +3289,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3373,12 +3304,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3403,8 +3333,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3418,12 +3348,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3448,8 +3377,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3463,12 +3392,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3493,8 +3421,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3508,12 +3436,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3538,8 +3465,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3553,12 +3480,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3583,8 +3509,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3598,12 +3524,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3628,8 +3553,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3643,12 +3568,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3673,8 +3597,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3688,12 +3612,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3718,8 +3641,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3733,12 +3656,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3763,8 +3685,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3778,12 +3700,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3808,8 +3729,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3823,12 +3744,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3853,8 +3773,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3868,12 +3788,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3898,8 +3817,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3913,12 +3832,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3943,8 +3861,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -3958,12 +3876,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -3988,8 +3905,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4003,12 +3920,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4033,8 +3949,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4048,12 +3964,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4078,8 +3993,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4093,12 +4008,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4123,8 +4037,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4138,12 +4052,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4168,8 +4081,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4183,12 +4096,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4213,8 +4125,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4228,12 +4140,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4258,8 +4169,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4273,12 +4184,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4303,8 +4213,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4318,12 +4228,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4348,8 +4257,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4363,12 +4272,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4393,8 +4301,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4408,12 +4316,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4438,8 +4345,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4453,12 +4360,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4483,8 +4389,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4498,12 +4404,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4528,8 +4433,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4543,12 +4448,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4573,8 +4477,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4588,12 +4492,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4618,8 +4521,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4633,12 +4536,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4663,8 +4565,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4678,12 +4580,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4708,8 +4609,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4723,12 +4624,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4753,8 +4653,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4768,12 +4668,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4798,8 +4697,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4813,12 +4712,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4843,8 +4741,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4858,12 +4756,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4888,8 +4785,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4903,12 +4800,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4933,8 +4829,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4948,12 +4844,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -4978,8 +4873,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -4993,12 +4888,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-						pst = con.prepareStatement("delete from ticket_booking where Seats = ? ");
-						
-						pst.setString(1, ans);
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
+						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -5023,8 +4917,8 @@ public class bookseat extends JFrame {
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -5038,12 +4932,11 @@ public class bookseat extends JFrame {
 					}
 				} else {
 					try {
-pst = con.prepareStatement("update ticket_booking set Seats = ?");
-						
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
 						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -5068,8 +4961,8 @@ pst = con.prepareStatement("update ticket_booking set Seats = ?");
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -5083,12 +4976,11 @@ pst = con.prepareStatement("update ticket_booking set Seats = ?");
 					}
 				} else {
 					try {
-pst = con.prepareStatement("update ticket_booking set Seats = ?");
-						
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
 						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -5113,8 +5005,8 @@ pst = con.prepareStatement("update ticket_booking set Seats = ?");
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -5128,12 +5020,11 @@ pst = con.prepareStatement("update ticket_booking set Seats = ?");
 					}
 				} else {
 					try {
-pst = con.prepareStatement("update ticket_booking set Seats = ?");
-						
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
 						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -5158,8 +5049,8 @@ pst = con.prepareStatement("update ticket_booking set Seats = ?");
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -5173,12 +5064,11 @@ pst = con.prepareStatement("update ticket_booking set Seats = ?");
 					}
 				} else {
 					try {
-pst = con.prepareStatement("update ticket_booking set Seats = ?");
-						
+						pst = con.prepareStatement("update ticket_booking set Seats = ?");
+
 						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
@@ -5203,8 +5093,8 @@ pst = con.prepareStatement("update ticket_booking set Seats = ?");
 					String pass = com.alpha.bookflight.otherInformations.pass_no;
 					String fn = com.alpha.bookflight.otherInformations.flight;
 					try {
-						pst = con.prepareStatement("update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
-						
+						pst = con.prepareStatement(
+								"update ticket_booking set Seats = ? where Name = ? and Nationality = ? and Passport_No = ? and Flight_Name = ? and Seats is null");
 
 						pst.setString(1, ans);
 						pst.setString(2, name);
@@ -5219,11 +5109,10 @@ pst = con.prepareStatement("update ticket_booking set Seats = ?");
 				} else {
 					try {
 						pst = con.prepareStatement("update ticket_booking set Seats = ?");
-						
+
 						pst.setNull(1, Types.NULL);
 						pst.executeUpdate();
-					}
-					catch(SQLException e1) {
+					} catch (SQLException e1) {
 						e1.printStackTrace();
 					}
 				}
